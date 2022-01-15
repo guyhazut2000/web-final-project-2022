@@ -1,0 +1,43 @@
+table td {
+  border: 1px solid #cccccc;
+}
+
+td,
+th {
+  height: 30px;
+  width: 160px;
+  text-align: center;
+  vertical-align: middle;
+}
+.table {
+  border-radius: 10px;
+  background-color: white;
+  border: 3px solid #cccccc;
+  margin: 0;
+}
+
+td {
+  font-size: large;
+  color: black;
+  font-weight: bold;
+  font-family: 'Josefin Slab';
+}
+
+tr {
+  font-size: large;
+  color: #1e69ff;
+  font-weight: bold;
+  font-family: 'Josefin Slab';
+}
+h3 {
+  font-size: 40px;
+  color: #1e69ff;
+  font-weight: bold;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Josefin Slab';
+  display: flex;
+  justify-content: center;
+}

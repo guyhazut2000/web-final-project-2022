@@ -1,0 +1,16 @@
+.table {
+  border-radius: 10px;
+  background-color: rgb(161, 196, 219);
+}
+
+.t-data {
+  font-size: large;
+  color: black;
+  font-weight: bold;
+}
+
+.t-row {
+  font-size: large;
+  color: #7392cf;
+  font-weight: bold;
+}

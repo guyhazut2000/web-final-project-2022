@@ -1,0 +1,19 @@
+body .swal2-html-container {
+  margin: 2%;
+}
+.swalSelect button {
+  margin: 10%;
+  padding: 10%;
+}
+
+.create-account {
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #5791ff;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  font-family: 'Josefin Slab';
+  width: 30%;
+}
