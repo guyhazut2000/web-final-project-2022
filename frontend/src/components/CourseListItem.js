@@ -13,14 +13,19 @@ const CourseItem = ({ item }) => {
             <div className="card">
               {item ? (
                 <Card>
-                <Card.Body style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-                <Link
-                    to={`/course/${item.courseName}`}
+                  <Card.Body
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
-                    Enter {item.courseName.toUpperCase()} Course By Professor {item.teacher.teacherName}
-                  </Link>
-                </Card.Body>
-              </Card>
+                    <Link to={`/course/${item.courseName}`}>
+                      Enter {item.courseName.toUpperCase()} Course By Professor{" "}
+                      {item.teacher.teacherName}
+                    </Link>
+                  </Card.Body>
+                </Card>
               ) : (
                 ""
               )}
@@ -33,10 +38,14 @@ const CourseItem = ({ item }) => {
             <div>
               {item ? (
                 <Card>
-                  <Card.Body style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-                  <Link
-                      to={`/course/${item.courseName}`}
-                    >
+                  <Card.Body
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Link to={`/course/${item.courseName}`}>
                       Enter {item.courseName.toUpperCase()} Course
                     </Link>
                   </Card.Body>

@@ -4,7 +4,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
 import TeacherDataService from "../services/Teacher";
 import UserDataService from "../services/User";
-import "./newGrade.css";
+import "../css/newGrade.css";
 import { useLocation } from "react-router";
 
 const AddNewGrade = (props) => {
@@ -198,15 +198,17 @@ const AddNewGrade = (props) => {
     }
   };
   return (
-    <>
-      <button
-        onClick={(e) => handleOnClick(e)}
-        className="btn btn-block create-account"
-      >
-        <FontAwesomeIcon icon={faPlus} style={{ paddingRight: "5px" }} />
-        Add New Grade
-      </button>
-    </>
+    <div className="row">
+      <div className="col">
+        <button
+          onClick={(e) => handleOnClick(e)}
+          className="btn btn-block create-account"
+        >
+          <FontAwesomeIcon icon={faPlus} style={{ paddingRight: "5px" }} />
+          Add New Grade
+        </button>
+      </div>
+    </div>
   );
 };
 

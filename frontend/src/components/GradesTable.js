@@ -7,11 +7,26 @@ const GradesTable = (props) => {
     return <></>;
   } else {
     const type = props.type;
-    const data = type === "lab" ? props.item.labs : props.item.exercises;
+    var data = type === "lab" ? props.item.labs : props.item.exercises;
     //   const exercises = props.item.exercises;
     //   console.log("1", labs);
     //   console.log("2", exercises);
 
+    const compare = (a, b) => {
+      if (type === "lab") {
+        if (a.labNumber < b.labNumber) return -1;
+        if (a.labNumber > b.labNumber) return 1;
+        return 0;
+      } else {
+        if (a.exerciseNumber < b.exerciseNumber) return -1;
+        if (a.exerciseNumber > b.exerciseNumber) return 1;
+        return 0;
+      }
+    };
+
+    let sortedData = data.sort(compare);
+    data = sortedData;
+    // console.log(sortedData);
     return data ? (
       <div className="table">
         <Table bordered hover responsive size="sm">

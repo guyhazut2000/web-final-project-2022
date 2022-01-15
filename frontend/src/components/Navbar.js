@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { resetUsersData } from "../redux/userRedux";
 import { resetCoursesData } from "../redux/courseRedux";
 import { resetGradesData } from "../redux/gradeRedux";
+import "../css/navbar.css";
 
 const Navbar = () => {
   const user = useSelector((state) => state.user.currentUser);
@@ -42,94 +43,88 @@ const Navbar = () => {
     }
   };
   return (
-    <div>
+    <div
+      className=""
+      style={{
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <nav className="navbar sticky-top navbar-default">
-        <div
-          className="container"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            padding: "0 30px",
-          }}
-        >
-          <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#myGrades-toggle-nav"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-            <div
+        <div className="navbar-header">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "baseline",
+            }}
+          >
+            <label
               style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "baseline",
-                justifyContent: "center",
+                fontSize: "40px",
+                fontFamily: "Dancing Script",
+                marginRight: "10px",
               }}
             >
-              <label
-                style={{
-                  fontSize: "40px",
-                  fontFamily: "Dancing Script",
-                  marginRight: "10px",
-                }}
+              GradeCourse
+            </label>
+            <label style={{ fontSize: "16px", fontFamily: "Dancing Script" }}>
+              Guy Hazut & Viki Ratson
+            </label>
+          </div>
+        </div>
+        <button
+          type="button"
+          className="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#myGrades-toggle-nav"
+          aria-expanded="false"
+        >
+          <span className="sr-only">Toggle navigation</span>
+          <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse"
+          id="myGrades-toggle-nav"
+          style={{ flexGrow: "1", alignItems: "center" }}
+        >
+          <ul className="nav navbar-nav navbar-right">
+            <li>
+              <a
+                href="/home"
+                style={{ fontFamily: "Josefin Slab", fontWeight: 600 }}
               >
-                GradeCourse
-              </label>
-              <label style={{ fontSize: "16px", fontFamily: "Dancing Script" }}>
-                Guy Hazut & Viki Ratson
-              </label>
-            </div>
-          </div>
-
-          <div
-            className="collapse navbar-collapse"
-            id="myGrades-toggle-nav"
-            style={{ flexGrow: "1" }}
-          >
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a
-                  href="/home"
-                  style={{ fontFamily: "Josefin Slab", fontWeight: 600 }}
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/course"
-                  style={{ fontFamily: "Josefin Slab", fontWeight: 600 }}
-                >
-                  My Courses
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about"
-                  style={{ fontFamily: "Josefin Slab", fontWeight: 600 }}
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onClick={logout}
-                  style={{ fontFamily: "Josefin Slab", fontWeight: 600 }}
-                >
-                  Logout
-                </a>
-              </li>
-            </ul>
-          </div>
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/course"
+                style={{ fontFamily: "Josefin Slab", fontWeight: 600 }}
+              >
+                My Courses
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+                style={{ fontFamily: "Josefin Slab", fontWeight: 600 }}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={logout}
+                style={{ fontFamily: "Josefin Slab", fontWeight: 600 }}
+              >
+                Logout
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>

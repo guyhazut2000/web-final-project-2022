@@ -143,25 +143,27 @@ const StudentTable = (props) => {
               : ""}
           </TextField>
           <div style={{ display: "flex" }}>
-            <div className="col-sm-8">
-              <h2>Lab Grades</h2>
-              {grades && (
-                <Table
-                  th={["No", "grade", "action"]}
-                  data={grades}
-                  type="lab"
-                ></Table>
-              )}
-            </div>
-            <div className="col-sm-8">
-              <h2>Exercise Grades</h2>
-              {grades && (
-                <Table
-                  th={["No", "grade", "action"]}
-                  data={grades}
-                  type="exercise"
-                ></Table>
-              )}
+            <div className="row">
+              <div className="col-lg-6 col-sm-6">
+                <h2>Lab Grades</h2>
+                {grades && (
+                  <Table
+                    th={["No", "grade", "action"]}
+                    data={grades}
+                    type="lab"
+                  ></Table>
+                )}
+              </div>
+              <div className="col-lg-6 col-sm-6">
+                <h2>Exercise Grades</h2>
+                {grades && (
+                  <Table
+                    th={["No", "grade", "action"]}
+                    data={grades}
+                    type="exercise"
+                  ></Table>
+                )}
+              </div>
             </div>
           </div>
           <AddNewGrade

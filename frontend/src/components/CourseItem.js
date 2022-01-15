@@ -38,12 +38,12 @@ const CourseItem = (props) => {
         {" "}
         Course Average: {calculateAverageGrade(grades)}
       </h1>
-      <div style={{ display: "flex" }}>
-        <div className="col-sm-8">
+      <div className="row">
+        <div className="col-lg-6 col-sm-6">
           <h2>Lab Grades</h2>
           {grades && <GradesTable item={grades} type={"lab"} />}
         </div>
-        <div className="col-sm-8">
+        <div className="col-lg-6 col-sm-6">
           <h2>Exercise Grades</h2>
           {grades && <GradesTable item={grades} type={"exercise"} />}
         </div>

@@ -13,8 +13,20 @@ const Table = (props) => {
   var tableHeadList = props.th;
   var type = props.type;
   var tableData = type === "lab" ? props.data.labs : props.data.exercises;
+  const compare = (a, b) => {
+    if (type === "lab") {
+      if (a.labNumber < b.labNumber) return -1;
+      if (a.labNumber > b.labNumber) return 1;
+      return 0;
+    } else {
+      if (a.exerciseNumber < b.exerciseNumber) return -1;
+      if (a.exerciseNumber > b.exerciseNumber) return 1;
+      return 0;
+    }
+  };
 
   const [data, setData] = useState(tableData);
+  data.sort(compare);
   const UpdateButton = (props) => (
     <button
       onClick={(e) => {

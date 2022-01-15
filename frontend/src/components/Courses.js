@@ -14,7 +14,7 @@ const Courses = (props) => {
       </h1>
       <hr />
       {/* <button onClick={refreshList}>refresh course list</button> */}
-      <Row className="m-auto"></Row>
+
       {courses !== null && courses !== [] ? (
         courses.map((item, i) => <CourseListItem item={item} key={i} />)
       ) : (
